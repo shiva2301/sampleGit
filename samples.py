@@ -20,7 +20,7 @@ dag=DAG(dag_id='sample-hello_world', description='first sample airflow dag',
     schedule_interval='0 12 * * *',
     start_date=datetime(2023, 1, 1), catchup=True)
 
-hello_operator=PythonOperator(task_id='hello_task',python_callable=print_helloworld,dag=dag)
+hello_operator =PythonOperator(task_id='hello_task',python_callable=print_helloworld,dag=dag)
 
 hello_bash= BashOperator(task_id='hello_bash', bash_command='echo "hello, how are you-{{execution_date}}"',dag=dag)
 
