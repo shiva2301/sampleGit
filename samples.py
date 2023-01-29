@@ -24,4 +24,4 @@ hello_operator =PythonOperator(task_id='hello_task',python_callable=print_hellow
 
 hello_bash= BashOperator(task_id='hello_bash', bash_command='echo "hello, how are you-{{execution_date}}"',dag=dag)
 
-hello_bash >> hello_operator
+hello_bash >> hello_operator >>
